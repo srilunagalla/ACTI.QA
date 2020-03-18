@@ -18,11 +18,10 @@ public class Samplesc {
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\nagal\\Downloads\\new\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
-		Dimension d = new Dimension(480,620);
+	
 		
 		driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		driver.get("https://www.google.com/");
-		driver.manage().window().setSize(d);
 		
 		TakesScreenshot shot=(TakesScreenshot)driver;
 		File src = shot.getScreenshotAs(OutputType.FILE);
